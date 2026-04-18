@@ -1,0 +1,140 @@
+.list {
+    border: 2.5px solid black;
+    border-radius: 20px;
+    width: 600px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.list h1 {
+    text-align: center;
+    justify-content: center;
+    grid-area: title;
+}
+
+#summary {
+    text-align: center;
+    grid-area: summary;
+    color: grey;
+}
+
+.changes {
+    margin: 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+        "changeonedate marker1 changeonesummary"
+        "changetwodate marker2 changetwosummary"
+        "changethreedate marker3 changethreesummary"
+        "changetfourdate marker4 changetfoursummary"
+        "button button button";
+}
+
+.changeonedate {
+    grid-area: changeonedate;
+    padding: 10px;
+    text-align: center;
+    color: grey;
+}
+
+.changeonesummary {
+    grid-area: changeonesummary;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.changetwodate {
+    grid-area: changetwodate;
+    padding: 10px;
+    text-align: center;
+    color: grey;
+}
+
+.changetwosummary {
+    grid-area: changetwosummary;
+    padding: 10px;
+    text-align: center;
+}
+.changethreedate {
+    grid-area: changethreedate;
+    padding: 10px;
+    text-align: center;
+    color: grey;
+}
+.changethreesummary {
+    grid-area: changethreesummary;
+    padding: 10px;
+    text-align: center;
+}
+.changetfourdate {
+    grid-area: changetfourdate;
+    padding: 10px;
+    text-align: center;
+    color: grey;
+}
+.changetfoursummary {
+    grid-area: changetfoursummary;
+    padding: 10px;
+    text-align: center;
+}
+
+.timeline-marker {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-marker::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 2px;
+    background-color: black;
+}
+
+.timeline-marker::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    z-index: -1;
+    align-items: center;
+}
+
+.timeline-marker:nth-child(2) {
+    grid-area: marker1;
+}
+
+.timeline-marker:nth-child(5) {
+    grid-area: marker2;
+}
+
+.timeline-marker:nth-child(8) {
+    grid-area: marker3;
+}
+
+.timeline-marker:nth-child(11) {
+    grid-area: marker4;
+}
+
+button {
+    grid-area: button;
+    justify-self: center;
+    margin-top: 10px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
